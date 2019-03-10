@@ -4,6 +4,7 @@ import java.io.File;
 import java.io.FileWriter;
 
 public class Register {
+
 	static Register user = new Register();
 	String username;
 	String password;
@@ -11,23 +12,6 @@ public class Register {
 	String lastName;
 	int id;
 	
-	
-	public Register(){
-	    username = "null";
-	    password = "null";
-	    firstName = "null";
-	    lastName = "null";
-	    id = 0;
-	}
-	
-	public Register(String username, String password, String firstName, String lastName, int id){
-	    this.username = username;
-	    this.password = password;
-	    this.firstName = firstName;
-	    this.lastName = lastName;
-	    this.id = id;
-	}
-
 	
 	public static void main(String[] args)throws Exception 
 	{
@@ -48,8 +32,9 @@ public class Register {
 		
 		
 		File log = new File("LoginCredentials.txt");
-		//creates a new file 	and notifies user if file does not already exist
-			    if(log.exists()==false){
+		//creates a new file
+			    if(log.exists()==false)
+			    {
 			            log.createNewFile();
 			    }
 			    PrintWriter out1 = new PrintWriter(new FileWriter(log, true));
@@ -63,8 +48,12 @@ public class Register {
 			    out1.append(System.getProperty("line.separator"));
 			    out1.close();
 			    
+
+			
+			    
 			    System.out.println ("[username=" + user.username + ", password=" + user.password + ", firstName=" + user.firstName + ", lastName="
 				+ user.lastName + ", id=" + user.id + "]");
+			
 	}
 
 	

@@ -1,5 +1,3 @@
-//temporary Auction home page
-
 package AuctionHome;
 
 import java.awt.EventQueue;
